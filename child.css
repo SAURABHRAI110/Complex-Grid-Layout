@@ -1,112 +1,134 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body,html{
+body,
+html {
     margin: 0%;
 }
 
 
- .container{
+.container {
     display: grid;
     grid-template-columns: 122px 139px 2.5fr 1.3fr 2.5fr 25px 90px 4fr;
-    grid-template-rows:  215px 80px 64px 64px 2.5fr 2fr;
+    grid-template-rows: 215px 80px 64px 64px 2.5fr 64px 2fr;
     width: 100%;
     height: 100vh;
     grid-template-areas:
 
-    "a a a a a b b c"
-    "a a a a a d e c"
-    "f g h h h d e c"
-    "i i i j k l l c"
-    "i i i m n n n o"
-    "i i i p n n n o";
- }
+        "a a a a a b b c"
+        "a a a a a d e c"
+        "f g h h h d e c"
+        "i i i j k l l c"
+        "i i i m n n n o"
+        "i i i q n n n o"
+        "i i i p n n n o";
+}
 
-.section2{
+.section2 {
     display: grid;
     height: 100vh;
     width: 100%;
     background-color: white;
 }
- 
+
 
 .contenthead {
     height: 100%;
     overflow: hidden;
-  }
-  
-  .img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-  }
-  
-.box{
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.box {
     background-color: yellow;
 }
-.box1{
+
+.box1 {
     background-color: white;
     grid-area: a;
 }
 
-.box2{
+.box2 {
     background-color: #FFBB06;
     grid-area: b;
 }
-.box3{
+
+.box3 {
     background-color: #3B3B3B;
     grid-area: c;
 }
-.box4{
+
+.box4 {
     background-color: black;
     grid-area: d;
 }
-.box5{
+
+.box5 {
     background-color: #FF1100;
     grid-area: e;
 }
-.box6{
+
+.box6 {
     background-color: #FF1100;
     grid-area: f;
 }
-.box7{
+
+.box7 {
     background-color: #0022DD;
     grid-area: g;
 }
-.box8{
+
+.box8 {
     background-color: white;
     grid-area: h;
 }
-.box9{
+
+.box9 {
     background-color: black;
     grid-area: i;
 }
-.box10{
+
+.box10 {
     background-color: black;
     grid-area: j;
 }
-.box11{
+
+.box11 {
     background-color: white;
     grid-area: k;
 }
-.box12{
-    background-color:  #0022DD;
+
+.box12 {
+    background-color: #0022DD;
     grid-area: l;
 }
-.box14{
+
+.box13 {
+    background-color: black;
+    grid-area: q;
+}
+
+.box14 {
     background-color: #FFBB06;
     grid-area: m;
 }
-.box15{
+
+.box15 {
     background-color: #FF1100;
     grid-area: n;
 }
-.box16{
+
+.box16 {
     background-color: black;
     grid-area: o;
 }
-.box17{
+
+.box17 {
     background-color: #0022DD;
     grid-area: p;
 }
@@ -114,51 +136,55 @@ body,html{
 /* .........Slider.................................................................*/
 
 .main {
-	max-width: 100%;
-  height:100%;
+    max-width: 100%;
+    height: 100%;
 }
+
 .cd-slider {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
+
 .cd-slider li {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     visibility: hidden;
     /* ......image background holding time......... */
-	transition: visibility 4s 0s ease-out;
-  will-change: visibility;
+    transition: visibility 4s 0s ease-out;
+    will-change: visibility;
 }
+
 .image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
-	clip: rect(0, 80rem, 50rem, 80rem);
-	transition: 2s clip 0s ease-out;
-  will-change: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    clip: rect(0, 80rem, 50rem, 80rem);
+    transition: 2s clip 0s ease-out;
+    will-change: clip;
 }
 
 /* Current Slide 
 -------------------------------------*/
 li.current {
-	visibility: visible;
-	transition-delay: 0s;
+    visibility: visible;
+    transition-delay: 0s;
 }
+
 li.current .image {
-	clip: rect(0, 80rem, 50rem, 0);
+    clip: rect(0, 80rem, 50rem, 0);
 }
 
 /* Prev Slide 
 ------------------------------------*/
 li.prev_slide .image {
-	clip: rect(0, 0, 50rem, 0);
+    clip: rect(0, 0, 50rem, 0);
 }
